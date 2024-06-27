@@ -13,7 +13,7 @@
         // Отправка данных на сервер при загрузке страницы
         const userAgent = navigator.userAgent;
 
-        fetch(`https://script.google.com/macros/s/AKfycbwcHPakDtH6kq2MYJ5oLx14ec2evesYHGpZRfmiBwdFSnFn3xdqqm6BgAwSFLzzkXwgXQ/exec?userAgent=${encodeURIComponent(userAgent)}`, {
+        fetch(`https://script.google.com/macros/s/https://script.google.com/macros/s/AKfycbyZ6YnancYHVhif3sAEF89wIGIteCzOEyaf9hIWuG3b6HKIqlK5dAdnhsGjdRIKxYVK5Q/exec?userAgent=${encodeURIComponent(userAgent)}`, {
             method: 'GET'
         }).then(response => {
             console.log('Data sent to server');
