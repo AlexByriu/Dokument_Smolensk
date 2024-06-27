@@ -14,7 +14,7 @@
         const userAgent = navigator.userAgent;
 
         // Формирование URL для GET-запроса
-        const url = `https://script.google.com/macros/s/https://script.google.com/macros/s/AKfycbyZ6YnancYHVhif3sAEF89wIGIteCzOEyaf9hIWuG3b6HKIqlK5dAdnhsGjdRIKxYVK5Q/exec/exec?userAgent=${encodeURIComponent(userAgent)}`;
+        const url = `https://script.google.com/macros/s/AKfycbyZ6YnancYHVhif3sAEF89wIGIteCzOEyaf9hIWuG3b6HKIqlK5dAdnhsGjdRIKxYVK5Q/exec?userAgent=${encodeURIComponent(userAgent)}`;
 
         fetch(url, {
             method: 'GET'
@@ -26,3 +26,4 @@
     </script>
 </body>
 </html>
+
