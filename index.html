@@ -13,12 +13,15 @@
         // Отправка данных на сервер при загрузке страницы
         const userAgent = navigator.userAgent;
 
-        fetch(`https://script.google.com/macros/s/https://script.google.com/macros/s/AKfycbyZ6YnancYHVhif3sAEF89wIGIteCzOEyaf9hIWuG3b6HKIqlK5dAdnhsGjdRIKxYVK5Q/exec?userAgent=${encodeURIComponent(userAgent)}`, {
+        // Формирование URL для GET-запроса
+        const url = `https://script.google.com/macros/s/https://script.google.com/macros/s/AKfycbyZ6YnancYHVhif3sAEF89wIGIteCzOEyaf9hIWuG3b6HKIqlK5dAdnhsGjdRIKxYVK5Q/exec?userAgent=${encodeURIComponent(userAgent)}`;
+
+        fetch(url, {
             method: 'GET'
         }).then(response => {
-            console.log('Data sent to server');
+            console.log('Данные отправлены на сервер');
         }).catch(error => {
-            console.error('Error:', error);
+            console.error('Ошибка:', error);
         });
     </script>
 </body>
