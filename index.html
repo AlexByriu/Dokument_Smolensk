@@ -6,18 +6,14 @@
     <title>Phishing Test</title>
 </head>
 <body>
-    <h1>Вы провалили тест по информационной безопасности. 
-        Просьба всех кто видит это сообщение написать на телеграм @pavelbtk и сообщить об инциденте, в любом случае я получаю уведомление кто открыл ссылку. Павел (новый сотрудник из Беларуси)</h1>
+    <h1>Welcome to the Phishing Test Page</h1>
+
     <script>
-        fetch('https://script.google.com/macros/s/https://script.google.com/macros/s/AKfycbzw_9WS-9LQ9v9_ndeepeKPJJy3OV3JSUwvi62r94T3TSLy06dmQUNe4v3vttu80dysMQ/exec/exec', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                userAgent: navigator.userAgent,
-                date: new Date().toISOString()
-            })
+        // Отправка данных на сервер при загрузке страницы
+        const userAgent = navigator.userAgent;
+
+        fetch(`https://script.google.com/macros/s/https://script.google.com/macros/s/AKfycbzw_9WS-9LQ9v9_ndeepeKPJJy3OV3JSUwvi62r94T3TSLy06dmQUNe4v3vttu80dysMQ/exec?userAgent=${encodeURIComponent(userAgent)}`, {
+            method: 'GET'
         }).then(response => {
             console.log('Data sent to server');
         }).catch(error => {
